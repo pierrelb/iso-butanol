@@ -25,6 +25,16 @@ species(
     structure=SMILES("CC(C)CO"),
 )
 species(
+    label='iButyl-A',
+    reactive=True,
+    structure=SMILES("[CH2]C(C)CO"),
+)
+species(
+    label='prop-2-yl',
+    reactive=True,
+    structure=SMILES("C[CH]C"),
+)
+species(
     label='N2',
     reactive=False,
     structure=InChI("InChI=1/N2/c1-2"),
@@ -36,6 +46,8 @@ simpleReactor(
     pressure=(1.5,'atm'),
     initialMoleFractions={
         "iBut": 1,
+        "iButyl-A": 0,
+        "prop-2-yl": 0,
     },
     terminationConversion={
         'iBut': 0.99,
@@ -47,6 +59,8 @@ simpleReactor(
     pressure=(1.5,'atm'),
     initialMoleFractions={
         "iBut": 1,
+        "iButyl-A": 0,
+        "prop-2-yl": 0,
     },
     terminationConversion={
         'iBut': 0.99,
@@ -59,6 +73,8 @@ simpleReactor(
     initialMoleFractions={
         "iBut": 0.1571, # This should be a mass fraction of 1/3 isobutane, 2/3 nitrogen
         "N2": 0.8429,
+        "iButyl-A": 0,
+        "prop-2-yl": 0,
     },
     terminationConversion={
         'iBut': 0.99,
@@ -71,6 +87,8 @@ simpleReactor(
     initialMoleFractions={
         "iBut": 0.1571, # This should be a mass fraction of 1/3 isobutane, 2/3 nitrogen
         "N2": 0.8429,
+        "iButyl-A": 0,
+        "prop-2-yl": 0,
     },
     terminationConversion={
         'iBut': 0.99,
